@@ -1,19 +1,18 @@
-'use client';
-
-import { useState, useEffect } from 'react';
+"use client";
+import { useState, useEffect } from "react";
 
 export default function CurrencyConverter() {
   const [amount, setAmount] = useState(1);
-  const [fromCurrency, setFromCurrency] = useState('USD');
-  const [toCurrency, setToCurrency] = useState('EUR');
+  const [fromCurrency, setFromCurrency] = useState("USD");
+  const [toCurrency, setToCurrency] = useState("EUR");
   const [exchangeRate, setExchangeRate] = useState(0);
   const [result, setResult] = useState(0);
 
   useEffect(() => {
     if (fromCurrency && toCurrency) {
       fetch(`/api/convert?from=${fromCurrency}&to=${toCurrency}`)
-        .then(response => response.json())
-        .then(data => setExchangeRate(data.rate));
+        .then((response) => response.json())
+        .then((data) => setExchangeRate(data.rate));
     }
   }, [fromCurrency, toCurrency]);
 
@@ -22,15 +21,16 @@ export default function CurrencyConverter() {
   }, [amount, exchangeRate]);
 
   return (
-    <div className="flex flex-col items-center justify-center gap-4 mt-10">
-      <div className="mb-4 space-y-1">
-        <p className="text-lg text-white">Saisissez le montant</p>
+    <div className="flex flex-col items-center justify-center mt-10">
+        <p className="text-lg text-white self-start">Saisissez le montant</p>
+      <div className="mb-4 space-x-2">
         <input
           type="number"
           value={amount}
           onChange={(e) => setAmount(Number(e.target.value))}
           className="p-3 border-teal-950 bg-teal-800 rounded text-white font-bold"
         />
+
         <select
           value={fromCurrency}
           onChange={(e) => setFromCurrency(e.target.value)}
@@ -42,7 +42,7 @@ export default function CurrencyConverter() {
           <option value="JPY">JPY</option>
           {/* Ajoutez plus de devises ici */}
         </select>
-        <span className="mx-2 text-white">à</span>
+        <span className="mx-4 text-white text-xl">en</span>
         <select
           value={toCurrency}
           onChange={(e) => setToCurrency(e.target.value)}
@@ -55,7 +55,20 @@ export default function CurrencyConverter() {
           {/* Ajoutez plus de devises ici */}
         </select>
       </div>
-      <div className="text-lg text-white">
+      <div className="text-lg my-2">
+        <button
+          onClick={() => {
+            setResult(0);
+            setAmount(1);
+            setFromCurrency("USD");
+            setToCurrency("EUR");
+          }}
+          className="p-3 bg-red-900 rounded text-white font-bold"
+        >
+          Réinitialiser
+        </button>
+      </div>
+      <div className="text-xl text-white">
         {amount} {fromCurrency} = {result.toFixed(2)} {toCurrency}
       </div>
     </div>
