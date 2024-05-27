@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Money Talk",
-  description: "Un convertisseur de devises.",
+  description: "L'argent parle, nous le traduisons.",
 };
 
 export default function RootLayout({

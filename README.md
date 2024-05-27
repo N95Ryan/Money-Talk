@@ -1,36 +1,28 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# Présentation du projet 👨‍🏫
 
-First, run the development server:
+Money Talk est une application de conversion de devise conçue pour offrir une expérience utilisateur fluide et réactive.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+# Stack 🖥️
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Voici les technologies utilisées au sein de ce projet :
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- ### Front-end avec Next.js et Tailwind 🚀
+ 
+Le développement front-end de l'application repose sur [Next.js](https://nextjs.org/), offrant une expérience utilisateur optimale avec un rendu côté serveur et une navigation rapide.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Pour l'interface, c'est [Tailwind](https://tailwindcss.com/) qui est utilisé en tirant parti de ses classes utilitaires pour simplifier le stylage.
 
-## Learn More
+# Installation et démarrage 📋
 
-To learn more about Next.js, take a look at the following resources:
+- Cloner le repo GitHub du projet : `git clone https://github.com/N95Ryan/Money-Talk`
+- Installer Yarn en exécutant la commande suivante dans votre terminal : `npm install -g yarn`
+- Installer les dépendances du projet avec Yarn : `yarn`
+- Utilisez la commande suivante pour lancer l'application en mode développement : `yarn dev`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# 👥 Auteurs
+- [Ryan PINA-SILASSE](https://github.com/N95Ryan)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+N'hésitez pas à adapter les informations concernant le dépôt GitHub, les auteurs, et toute autre spécificité propre à votre projet Money Talk.
