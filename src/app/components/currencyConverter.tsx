@@ -1,5 +1,6 @@
 "use client";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
+import CurrencyFlag from 'react-currency-flags';
 
 export default function CurrencyConverter() {
   const [amount, setAmount] = useState(1);
@@ -22,7 +23,7 @@ export default function CurrencyConverter() {
 
   return (
     <div className="flex flex-col items-center justify-center mt-10">
-        <p className="text-lg text-white self-start">Saisissez le montant</p>
+      <p className="text-lg text-white self-start">Saisissez le montant</p>
       <div className="mb-4 space-x-2">
         <input
           type="number"
@@ -30,30 +31,18 @@ export default function CurrencyConverter() {
           onChange={(e) => setAmount(Number(e.target.value))}
           className="p-3 border-teal-950 bg-teal-800 rounded text-white font-bold"
         />
-
         <select
           value={fromCurrency}
           onChange={(e) => setFromCurrency(e.target.value)}
           className="p-3 border-teal-950 bg-teal-800 rounded text-white font-bold"
-        >
-          <option value="USD">USD</option>
-          <option value="EUR">EUR</option>
-          <option value="GBP">GBP</option>
-          <option value="JPY">JPY</option>
-          {/* Ajoutez plus de devises ici */}
-        </select>
+        ></select>
+
         <span className="mx-4 text-white text-xl">en</span>
         <select
           value={toCurrency}
           onChange={(e) => setToCurrency(e.target.value)}
           className="p-3 border-teal-950 bg-teal-800 rounded text-white font-bold"
-        >
-          <option value="USD">USD</option>
-          <option value="EUR">EUR</option>
-          <option value="GBP">GBP</option>
-          <option value="JPY">JPY</option>
-          {/* Ajoutez plus de devises ici */}
-        </select>
+        ></select>
       </div>
       <div className="text-lg my-2">
         <button

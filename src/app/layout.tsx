@@ -1,3 +1,4 @@
+import React from "react";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -8,6 +9,8 @@ export const metadata: Metadata = {
   title: "Money Talk",
   description: "L'argent parle, nous le traduisons.",
 };
+
+export const revalidate = 0;
 
 export default function RootLayout({
   children,
