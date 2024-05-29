@@ -7,7 +7,7 @@ export default function Home() {
       <div className="flex flex-col items-center justify-center gap-4">
         <p className="text-6xl font-bold">Money Talk 💸</p>
         <p className="text-2xl font-light">
-          L&apos;argent parle, nous le traduisons.
+        {"L'argent parle, nous le traduisons."}
         </p>
         <Dropdown />
       </div>
