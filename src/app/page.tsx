@@ -1,5 +1,5 @@
 import React from "react";
-import CurrencyConverter from "./components/currencyConverter";
+import Dropdown from "./components/dropdown";
 
 export default function Home() {
   return (
@@ -9,8 +9,9 @@ export default function Home() {
         <p className="text-2xl font-light">
           L&apos;argent parle, nous le traduisons.
         </p>
+        <Dropdown />
       </div>
-      <CurrencyConverter />
+
     </div>
   );
 }
