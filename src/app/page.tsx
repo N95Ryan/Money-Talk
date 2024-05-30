@@ -1,5 +1,5 @@
 import React from "react";
-import Dropdown from "./components/dropdown";
+import Panel from "./components/panel";
 
 export default function Home() {
   return (
@@ -9,7 +9,7 @@ export default function Home() {
         <p className="text-2xl font-light">
         {"L'argent parle, nous le traduisons."}
         </p>
-        <Dropdown />
+        <Panel />
       </div>
 
     </div>
